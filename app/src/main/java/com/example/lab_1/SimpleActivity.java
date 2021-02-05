@@ -17,18 +17,17 @@ import android.widget.Toast;
 public class SimpleActivity extends AppCompatActivity {
 
     final String LOG_STR = "Help!";
-    final String ON_CREATE = "in OnCreate!";
-    //private final String C_TAG = "ON_CREATE";
+    private final String C_TAG = "ON_CREATE";
     private final String S_TAG = "ON_START";
     private final String R_TAG = "ON_RESUMED";
     private final String P_TAG = "ON_PAUSED";
     private final String ST_TAG = "ON_STOP";
     private final String D_TAG = "ON_DESTROY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Log.i(ON_CREATE, "Started onCreate");
+        Log.i(C_TAG, "Just invoked onCreate: non-existant to stopped");
 
         setContentView(R.layout.activity_simple);
         Toolbar toolbar = findViewById(R.id.toolbar);
